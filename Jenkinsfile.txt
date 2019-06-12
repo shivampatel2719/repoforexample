@@ -1,21 +1,24 @@
 pipeline{
-
-agent any{
-
-stage("one")
-{
-echo "This is stage one"
+ 
+   agent any 
+   stages{
+      stage("one"){
+        steps{
+      echo "hello first stage"
+}
+}
+     stage("two"){
+        steps{
+      echo "hello second stage"
+      input("Want to proceed?")
+}
+}
+     stage("three"){
+        steps{
+      echo "hello last stage"
+}
 }
 
-stage("two")
-{
-echo "This is stage two"
-input("Proceed?")
-}
 
-stage("three")
-{
-echo "This is stage three"
 }
-
-}}
+}
