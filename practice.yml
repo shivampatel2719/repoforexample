@@ -1,0 +1,7 @@
+--- 
+  name: Demo for demo
+  hosts: test-servers
+  sudo: yes
+  tasks: 
+      - name: Running command
+        command: mkdir /home/jenkins_from_shivam
